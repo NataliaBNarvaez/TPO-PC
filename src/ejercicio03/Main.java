@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Usuario
+ * @author natalia.narvaez
  */
 public class Main {
 

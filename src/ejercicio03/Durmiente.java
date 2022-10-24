@@ -7,7 +7,7 @@ package ejercicio03;
 
 /**
  *
- * @author Usuario
+ * @author natalia.narvaez
  */
 public class Durmiente implements Runnable {
 

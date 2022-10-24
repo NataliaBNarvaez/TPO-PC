@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Usuario
+ * @author natalia.narvaez
  */
 public class Controlador implements Runnable {
 
