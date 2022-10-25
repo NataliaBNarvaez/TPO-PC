@@ -16,6 +16,7 @@ public class Transbordador {
     int capacidad = 10;
     int enEspera = 0;
     boolean sePuede = true;
+    int viajesRealizados = 1;
     Semaphore semCapacidad = new Semaphore(capacidad);
     Semaphore semVerificar = new Semaphore(1);
     Semaphore semViajar = new Semaphore(0);
@@ -58,16 +59,20 @@ public class Transbordador {
         try {
             semViajar.acquire();
             System.out.println("El transbordador empezo a cruzar, espacios ocupados " + espacioOcupado);
+            viajesRealizados++;
         } catch (InterruptedException ex) {
             Logger.getLogger(Transbordador.class.getName()).log(Level.SEVERE, null, ex);
         }
         sePuede = false;
     }
     
+    public int getViajes(){
+        return viajesRealizados;
+    }
+    
     public void liberarEspacio(){
         for(int i = 0; i < espacioOcupado; i++){
             semCapacidad.release();
-            System.out.println("libero " + i);
         }
         espacioOcupado = 0;
         System.out.println("Se libero el transbordador");
@@ -88,7 +93,6 @@ public class Transbordador {
     }
     
     public boolean esteLado(int n){
-    	System.out.println("El auto " + n + " pregunta este lado");
         return sePuede;
     }
     

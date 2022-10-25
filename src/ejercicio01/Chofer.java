@@ -5,29 +5,32 @@
  */
 package ejercicio01;
 
-//import java.util.logging.Level;
-//import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author constanza.ibarra
  */
-public class Chofer implements Runnable{
+public class Chofer implements Runnable {
+
     Transbordador transbordador;
     int cantViajes = 2;
 
     public Chofer(Transbordador transbordador) {
         this.transbordador = transbordador;
     }
-    
-    public void run(){
-    	while(cantViajes > 0) {
-    		if(!transbordador.hayLugar()) {
-    			transbordador.cruzar();
+
+    public void run() {
+        while (cantViajes > 0) {
+            transbordador.verificar();
+            if (!transbordador.hayLugar()) {
+                transbordador.terminarVerificar();
+                transbordador.cruzar();
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException ex) {
-                    //Logger.getLogger(Chofer.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Chofer.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 System.out.println("empezo a verificar");
                 transbordador.verificar();
@@ -36,7 +39,7 @@ public class Chofer implements Runnable{
                 transbordador.liberarEspera();
                 transbordador.terminarVerificar();
                 cantViajes--;
-    		}
-    	}
+            }
+        }
     }
 }
