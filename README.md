@@ -1,6 +1,6 @@
 # TPO-PC
 
-Ejerecicio 01 - Buque de autos
+🍋 Ejerecicio 01 - Buque de autos
 
 Un transbordador o buque para transporte de vehículos permite pasar autos de un lado de un río al otro.
 Los autos viajan por el lado este del río, cruzan el río en el transbordador y continúan su viaje por el lado
@@ -9,7 +9,7 @@ el río. Cuando ha cruzado y descargado los coches, vuelve vacío.
 Considere en el transbordador operaciones ir y volver. 
 Ir hace que el transbordador cruce con los autos, volver lo hace volver vacio.
 
-Ejercicio 02 - Formacion de agua
+🍋 Ejercicio 02 - Formacion de agua
 
 Átomos de Hidrógeno y Oxígeno vagan por el espacio (por un número al azar de tiempo) buscándose
 mutuamente para formar Agua. Cuando un átomo de Oxígeno está listo entra en el proceso Olisto del
@@ -19,7 +19,7 @@ terminar HacerAgua los tres átomos terminan su ejecución. Considerar que exist
 Considerar que cada vez que se logra completar el proceso de HacerAgua, el agua resultante es depositada en un recipiente.
 Cuando el recipiente se llena el agua es envasada para su distribucion y se vacia el recipiente. Para que un recipiente se llene tiene que lograrse el HacerAgua k veces.
 
-Ejercicio 03 - Reloj alarma
+🍋 Ejercicio 03 - Reloj alarma
 
 Se consideran un número N de hilos durmientes que desean dormir varios períodos.
 Un reloj alarma los despierta para ir a trabajar. Es primitivo y sólo despierta al hilo durmiente más
